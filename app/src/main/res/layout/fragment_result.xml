@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_black"
+    tools:context=".views.ResultFragment">
+
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/averia_sans_libre"
+        android:gravity="center"
+        android:text="-Results-"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_color"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/passedAnimID"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        app:lottie_rawRes="@raw/passed"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="invisible"
+        android:layout_marginTop="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_title"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/failedAnimID"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        app:lottie_rawRes="@raw/failed"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="invisible"
+        android:layout_marginTop="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_title"/>
+
+    <ProgressBar
+        android:id="@+id/result_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:progress="100"
+        android:indeterminateTint="@color/primary_color"
+        android:progressDrawable="@drawable/custom_progressbar_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resultFrag_gotoHomeButtonID"/>
+
+    <TextView
+        android:id="@+id/result_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/work_sans"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/result_progress"
+        app:layout_constraintEnd_toEndOf="@+id/result_progress"
+        app:layout_constraintStart_toStartOf="@+id/result_progress"
+        app:layout_constraintTop_toTopOf="@+id/result_progress" />
+
+
+    <TextView
+        android:id="@+id/resultFrag_CorrectAnsID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/work_sans"
+        android:gravity="start"
+        android:text="Correct Answers"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resultFrag_WrongAnsID" />
+
+    <TextView
+        android:id="@+id/resultFrag_CorrectAns_NUM_ID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24sp"
+        android:fontFamily="@font/work_sans"
+        android:text="NA"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/resultFrag_CorrectAnsID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/resultFrag_CorrectAnsID" />
+
+
+    <TextView
+        android:id="@+id/resultFrag_WrongAnsID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/work_sans"
+        android:gravity="start"
+        android:text="Wrong Answers"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resultFrag_MissedAnsID" />
+
+    <TextView
+        android:id="@+id/resultFrag_WrongAns_NUM_ID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24sp"
+        android:fontFamily="@font/work_sans"
+        android:text="NA"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/resultFrag_WrongAnsID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/resultFrag_WrongAnsID" />
+
+
+    <TextView
+        android:id="@+id/resultFrag_MissedAnsID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="66dp"
+        android:fontFamily="@font/work_sans"
+        android:gravity="start"
+        android:text="Not Answered"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resultFrag_gotoHomeButtonID" />
+
+    <TextView
+        android:id="@+id/resultFrag_MissedAns_NUM_ID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24sp"
+        android:fontFamily="@font/work_sans"
+        android:text="NA"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/resultFrag_MissedAnsID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/resultFrag_MissedAnsID" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/celebrationAnimID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/confirm_celebrations"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/resultFrag_gotoHomeButtonID"/>
+
+    <android.widget.Button
+        android:id="@+id/resultFrag_gotoHomeButtonID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/solid_button_bg"
+        android:fontFamily="@font/work_sans"
+        android:padding="12dp"
+        android:text="Go To Home"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

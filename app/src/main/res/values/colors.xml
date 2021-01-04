@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    Jio Saavn Green color code #2AC5B3-->
+    <color name="primary_color">#2AC5B3</color>
+<!--    <color name="primary_color">#048767</color>-->
+    <color name="primary_col">#16697a</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="primary_black">#FF000000</color>
+    <color name="secondary_black">#191919</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="off_white">#F6F6F4</color>
+    <color name="colorLightText">#929292</color>
+    <color name="colorLightTextThin">#7A7A7A</color>
+    <color name="colorRed">#DA0904</color>
+    <color name="colorGreen">#0A8710</color>
+</resources>

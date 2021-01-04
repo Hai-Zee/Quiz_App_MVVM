@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="12dp"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="8dp"
+    android:background="@color/secondary_black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary_black">
+
+        <ImageView
+            android:id="@+id/listImageID"
+            android:layout_width="0dp"
+            android:layout_height="196dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:translationZ="10dp"
+            android:background="@drawable/image_cover"
+            app:layout_constraintStart_toStartOf="@id/listImageID"
+            app:layout_constraintEnd_toEndOf="@id/listImageID"
+            app:layout_constraintBottom_toBottomOf="@id/listImageID" />
+
+
+        <TextView
+            android:id="@+id/listTitleID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/averia_sans_libre"
+            android:textStyle="bold"
+            android:text="Quiz Title"
+            android:textColor="@color/primary_color"
+            android:textSize="26sp"
+            android:gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listImageID"/>
+
+        <TextView
+            android:id="@+id/listDescID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="Quiz Description"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listTitleID"
+            android:lineHeight="26dp"/>
+
+        <TextView
+            android:id="@+id/listDifficultyLevelID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="difficulty level"
+            android:textColor="@color/colorLightText"
+            android:textSize="14sp"
+            android:gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listDescID"/>
+
+        <android.widget.Button
+            android:id="@+id/listFragViewQuizButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Quiz"
+            android:textSize="16sp"
+            android:textColor="@color/primary_color"
+            android:textAllCaps="false"
+            android:fontFamily="@font/work_sans"
+            android:textAlignment="center"
+            android:background="@drawable/button_outline"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listDifficultyLevelID"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

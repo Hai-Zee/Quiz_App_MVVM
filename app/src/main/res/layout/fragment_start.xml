@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_black"
+    tools:context=".views.StartFragment">
+
+    <TextView
+        android:id="@+id/quizAppWelcomeScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz App"
+        android:textSize="36sp"
+        android:textColor="@color/primary_color"
+        android:fontFamily="@font/averia_sans_libre"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lottie_rawRes="@raw/programmer_anim"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizAppWelcomeScreen"
+        app:layout_constraintBottom_toTopOf="@id/google_sign_in_button_ID"
+        />
+
+    <android.widget.Button
+        android:id="@+id/google_sign_in_button_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/google_sign_in_bg_button"
+        android:fontFamily="@font/work_sans"
+        android:text="Sign In with Google"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/loadingAppID"
+        app:layout_constraintEnd_toEndOf="@id/loadingAppID"
+        app:layout_constraintStart_toStartOf="@id/loadingAppID" />
+
+
+    <TextView
+        android:id="@+id/loadingAppID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/work_sans"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
