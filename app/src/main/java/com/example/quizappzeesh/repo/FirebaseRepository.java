@@ -34,7 +34,7 @@ public class FirebaseRepository {
                     onFireStoreTaskComplete.quizListDataAdded(task.getResult().toObjects(QuizListModel.class));
                 }
                 else{
-
+                    Log.d("quizData_repo", "onComplete: "+ task.getException().getMessage());
                 }
             }
         });
@@ -42,7 +42,5 @@ public class FirebaseRepository {
 
     public interface OnFireStoreTaskComplete{
         void quizListDataAdded(List<QuizListModel> quizListModelsList);
-        void onError(Exception e);
-
     }
 }
