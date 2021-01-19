@@ -1,5 +1,5 @@
-# Quiz_App
-- User can take part into different quizzes to test, and can get the result
+# Quiz App
+User can take part into different quizzes to test, and can get the result
 
 - **MVVM Architecture**
 - **Used FireBase Cloud Store for real time database & Firebase Google Authentication**
