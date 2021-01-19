@@ -36,5 +36,5 @@
 
 ***Things that I will improve further***
 
-**I will create an Admin panel**
-**Will refactor the app in Kotlin**
+- **I will create an Admin panel**
+- **I will refactor the app into Kotlin**
