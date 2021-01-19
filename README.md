@@ -8,6 +8,7 @@ User can take part into different quizzes to test, and can get the result
 - **Broadcast Reciever & Lottie Animations**
 - **Attractive UI (Material Design)**
 - **Low Size apk (Developed in Single Activity)**
+- **Attractive UI (Material Design)**
 
 
 ### Screenshots
