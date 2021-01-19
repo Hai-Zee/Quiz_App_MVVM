@@ -3,8 +3,11 @@
 
 - **MVVM Architecture**
 - **Used FireBase Cloud Store for real time database & Firebase Google Authentication**
-- **Broadcast**
-- **Lottie Animations**
+- **Jetpack Navigation**
+- **View & Data Binding**
+- **Broadcast Reciever & Lottie Animations**
+- **Attractive UI (Material Design)**
+- **Low Size apk (Developed in Single Activity)**
 
 
 ### Screenshots
@@ -30,3 +33,8 @@
 </table>
 
 ### **Check the screen recording video of this application from thisurl :** <a href='linkedin.com/posts/zeeshanhaider1994_firebase-firestore-mvvm-activity-6752099804383322112-uKbT'>click here</a>
+
+***Things that I will improve further***
+
+**I will create an Admin panel**
+**Will refactor the app in Kotlin**
