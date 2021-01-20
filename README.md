@@ -13,7 +13,6 @@ User can take part into different quizzes to test, and can get the result
 
 ### Screenshots
 <table>
-# Shimmer Effect in Night mode and Day mode
 <tr>
 <td><img src = "https://user-images.githubusercontent.com/72437004/105044354-a3811880-5a8c-11eb-949e-127bcb27efce.gif" height = "450" width="260"></td>
 <td><img src = "https://user-images.githubusercontent.com/72437004/105044442-be538d00-5a8c-11eb-982c-7392c03672a7.gif" height = "450" width="260"></td>
