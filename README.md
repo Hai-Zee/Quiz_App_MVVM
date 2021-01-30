@@ -1,4 +1,4 @@
-# Quiz App
+# Quiz App (MVVM Architecture)
 
 **It's a Quiz Maker android app, User can create quizzes on it and then can share it with others using Unique ID... so that others can participate in that quiz.
 
