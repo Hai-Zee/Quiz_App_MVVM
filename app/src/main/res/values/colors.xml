@@ -14,4 +14,7 @@
     <color name="colorLightTextThin">#7A7A7A</color>
     <color name="colorRed">#DA0904</color>
     <color name="colorGreen">#0A8710</color>
+
+    <color name="unSelected">#707070</color>
+
 </resources>

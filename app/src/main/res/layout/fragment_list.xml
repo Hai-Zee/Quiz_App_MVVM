@@ -4,60 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.ListFragment"
     android:background="@color/primary_black"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".views.fragments.ListFragment">
 
-
-    <ImageButton
-        android:id="@+id/menuThreeDotsID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_menu_threedots_more_vert_24"
-        android:background="@color/primary_black"
-        android:paddingTop="12dp"
-        android:paddingEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/listFragTextID"
-        app:layout_constraintBottom_toBottomOf="@id/listFragTextID"/>
-
-    <TextView
-        android:id="@+id/listFragTextID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/averia_sans_libre"
-        android:padding="6dp"
-        android:text="Quiz"
-        android:textColor="@color/primary_color"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listFragRecycleViewID"
-        android:layout_width="match_parent"
+    <fragment
+        android:id="@+id/nav_host_list_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="invisible"
-        tools:listitem="@layout/quiz_list_custom_view"
-        app:layout_constraintStart_toStartOf="parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listFragTextID"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph_second" />
 
-    <ProgressBar
-        android:id="@+id/listProgressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/primary_color"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/secondary_black"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/state_check_color"
+        app:itemRippleColor="@color/primary_black"
+        app:itemTextColor="@drawable/state_check_color"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/listFragRecycleViewID"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_view_primary_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

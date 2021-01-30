@@ -1,4 +1,4 @@
-package com.example.quizappzeesh.views;
+package com.example.quizappzeesh.views.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,7 +43,9 @@ public class StartFragment extends Fragment implements FirebaseAuth.AuthStateLis
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,7 +64,7 @@ public class StartFragment extends Fragment implements FirebaseAuth.AuthStateLis
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        if (firebaseAuth.getCurrentUser() != null){
+        if (firebaseAuth.getCurrentUser() != null) {
             navController.navigate(R.id.action_startFragment_to_listFragment);
         }
     }
@@ -80,7 +82,7 @@ public class StartFragment extends Fragment implements FirebaseAuth.AuthStateLis
         });
     }
 
-    public void googleSignIn(){
+    public void googleSignIn() {
         List<AuthUI.IdpConfig> providers = Arrays.asList(new AuthUI.IdpConfig.GoogleBuilder().build());
 
         Intent intent = AuthUI.getInstance().
@@ -93,28 +95,26 @@ public class StartFragment extends Fragment implements FirebaseAuth.AuthStateLis
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==AUTHUI_RQST_CODE){
-            if (resultCode==RESULT_OK){
+        if (requestCode == AUTHUI_RQST_CODE) {
+            if (resultCode == RESULT_OK) {
 
                 loadingText.setText(null);
 
 //                sign in as new user or existed user..
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user.getMetadata().getCreationTimestamp() == user.getMetadata().getLastSignInTimestamp()){
+                if (user.getMetadata().getCreationTimestamp() == user.getMetadata().getLastSignInTimestamp()) {
 
-                    Toast.makeText(getContext(), "Welcome "+ user.getDisplayName(), Toast.LENGTH_LONG).show();
-                } else{
-                    Toast.makeText(getContext(), "Welcome Back! "+ user.getDisplayName(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Welcome " + user.getDisplayName(), Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getContext(), "Welcome Back! " + user.getDisplayName(), Toast.LENGTH_LONG).show();
                 }
                 navController.navigate(R.id.action_startFragment_to_listFragment);
-            }
-            else{
+            } else {
                 IdpResponse response = IdpResponse.fromResultIntent(data);
-                if (response==null){
+                if (response == null) {
                     loadingText.setText(null);
                     Toast.makeText(getContext(), "sign in cancelled", Toast.LENGTH_LONG).show();
-                }
-                else{
+                } else {
                     Toast.makeText(getContext(), response.getError().toString(), Toast.LENGTH_LONG).show();
                 }
             }
@@ -135,10 +135,9 @@ public class StartFragment extends Fragment implements FirebaseAuth.AuthStateLis
 
     @Override
     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-        if (firebaseAuth.getCurrentUser() != null){
+        if (firebaseAuth.getCurrentUser() != null) {
             navController.navigate(R.id.action_startFragment_to_listFragment);
-        }
-        else{
+        } else {
             return;
         }
     }

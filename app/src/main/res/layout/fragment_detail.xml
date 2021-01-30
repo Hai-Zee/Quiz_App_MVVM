@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="quiz"
+            type="com.example.quizappzeesh.model.QuizModel" />
+    </data>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".views.DetailFragment"
+    tools:context=".views.fragments.DetailFragment"
     android:background="@color/primary_black">
 
     <ScrollView
@@ -25,10 +33,10 @@
         android:layout_height="236dp"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder_image"
+        android:bindingImageUrl="@{quiz.imageUrl}"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
 
     <View
         android:layout_width="0dp"
@@ -50,7 +58,7 @@
             android:fontFamily="@font/averia_sans_libre"
             android:textStyle="bold"
             android:gravity="start"
-            android:text="Quiz Title"
+            android:text="@{quiz.name}"
             android:textColor="@color/primary_color"
             android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +70,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/work_sans"
-        android:text="Quiz Description"
+        android:text="@{quiz.description}"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:gravity="start"
@@ -95,7 +103,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/work_sans"
-            android:text="NA"
+            android:text="@{quiz.level}"
             android:textColor="@color/colorLightText"
             android:textSize="14sp"
             android:layout_marginEnd="24sp"
@@ -125,7 +133,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/work_sans"
-            android:text="NA"
+            android:text="@{String.valueOf(quiz.questions)}"
             android:textColor="@color/colorLightText"
             android:textSize="14sp"
             android:layout_marginEnd="24sp"
@@ -189,3 +197,4 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

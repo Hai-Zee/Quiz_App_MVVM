@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_black"
-    tools:context=".views.QuizFragment">
-
+    tools:context=".views.fragments.QuizFragment">
 
     <ImageButton
         android:id="@+id/crossButtonID"
@@ -32,9 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
         <TextView
-            android:id="@+id/quizFragTitleID"
+            android:id="@+id/quizFrag_QuizNameID"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -43,7 +42,7 @@
             android:fontFamily="@font/averia_sans_libre"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Loading Quiz..."
+            android:text="Quiz name"
             android:textAlignment="center"
             android:textColor="@color/primary_color"
             android:textSize="26sp"
@@ -60,8 +59,8 @@
             android:text="Question No."
             android:textColor="@color/colorLightText"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/quizFragTitleID"
-            app:layout_constraintTop_toBottomOf="@id/quizFragTitleID" />
+            app:layout_constraintStart_toStartOf="@id/quizFrag_QuizNameID"
+            app:layout_constraintTop_toBottomOf="@id/quizFrag_QuizNameID" />
 
         <TextView
             android:id="@+id/quizQuesNumbersID"
@@ -85,7 +84,7 @@
             android:progress="100"
             android:indeterminateTint="@color/primary_color"
             android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="@id/quizFragTitleID"
+            app:layout_constraintEnd_toEndOf="@id/quizFrag_QuizNameID"
             app:layout_constraintTop_toTopOf="@id/quizFragQuesTitleID"
             app:layout_constraintBottom_toBottomOf="@id/quizQuesNumbersID"/>
 
@@ -96,6 +95,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="28sp"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="@id/quizPrgrsbarID"
             app:layout_constraintEnd_toEndOf="@id/quizPrgrsbarID"
             app:layout_constraintStart_toStartOf="@id/quizPrgrsbarID"
@@ -109,7 +109,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/work_sans"
-            android:text="Fetching Question..."
+            android:text="Loading questions.."
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp"

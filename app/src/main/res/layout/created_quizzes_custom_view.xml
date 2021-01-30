@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.quizappzeesh.model.QuizModel" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="createdQuizzesClickListnerInterface"
+            type="com.example.quizappzeesh.adapter.CreatedQuizzesAdapter.CreatedQuizzesClickListnerInterface" />
+    </data>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@color/secondary_black"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary_black">
+
+        <ImageView
+            android:id="@+id/createdQuizImageID"
+            android:layout_width="0dp"
+            android:layout_height="196dp"
+            android:bindingImageUrl="@{data.imageUrl}"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@drawable/image_cover"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/createdQuizImageID"
+            app:layout_constraintEnd_toEndOf="@id/createdQuizImageID"
+            app:layout_constraintStart_toStartOf="@id/createdQuizImageID" />
+
+        <TextView
+            android:id="@+id/createdQuizTitleID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/averia_sans_libre"
+            android:gravity="start"
+            android:text="Quiz Title"
+            android:textColor="@color/primary_color"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createdQuizImageID" />
+
+        <TextView
+            android:id="@+id/createdQuizDescID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/work_sans"
+            android:gravity="start"
+            android:lineHeight="26dp"
+            android:maxLines="3"
+            android:text="@{data.description}"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createdQuizTitleID" />
+
+        <TextView
+            android:id="@+id/createdQuizDifficultyLevelID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/work_sans"
+            android:gravity="start"
+            android:text="@{data.level}"
+            android:textColor="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createdQuizDescID" />
+
+        <ImageButton
+            android:id="@+id/createdQuizDeleteButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/secondary_black"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintEnd_toStartOf="@id/createdQuizShareButtonID"
+            app:layout_constraintTop_toTopOf="@id/createdQuizShareButtonID"
+            app:layout_constraintBottom_toBottomOf="@id/createdQuizShareButtonID"
+            android:onClick="@{() -> createdQuizzesClickListnerInterface.deleteButtonListner(position)}"/>
+
+        <ImageButton
+            android:id="@+id/createdQuizShareButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/secondary_black"
+            android:src="@drawable/ic_baseline_share_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createdQuizDifficultyLevelID"
+            android:onClick="@{() -> createdQuizzesClickListnerInterface.shareButtonListner(position)}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+</layout>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.quizappzeesh.views.StartFragment"
+        android:name="com.example.quizappzeesh.views.fragments.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.quizappzeesh.views.ListFragment"
+        android:name="com.example.quizappzeesh.views.fragments.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.quizappzeesh.views.DetailFragment"
+        android:name="com.example.quizappzeesh.views.fragments.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <action
@@ -59,7 +59,7 @@
 
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.example.quizappzeesh.views.QuizFragment"
+        android:name="com.example.quizappzeesh.views.fragments.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" >
         <action
@@ -85,10 +85,9 @@
             android:defaultValue="null" />
     </fragment>
 
-
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.quizappzeesh.views.ResultFragment"
+        android:name="com.example.quizappzeesh.views.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
@@ -100,5 +99,6 @@
             android:name="quizID"
             app:argType="string"
             android:defaultValue="null" />
+
     </fragment>
 </navigation>

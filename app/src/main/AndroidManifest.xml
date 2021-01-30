@@ -11,8 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAppZeesh">
 
-
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".views.activities.MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

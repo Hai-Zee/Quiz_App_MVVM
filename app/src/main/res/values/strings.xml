@@ -3,4 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="note_msg">Note: You can create your quiz here and you can share it with others so that they can participate in it.</string>
+
+<!--    Developer Note-->
+    <string name="developer_note">Developed with ♥</string>
 </resources>

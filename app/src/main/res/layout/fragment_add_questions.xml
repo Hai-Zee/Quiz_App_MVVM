@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.AddQuestionsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/discard_question_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="14dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/quiz_close_btn"
+            app:layout_constraintBottom_toBottomOf="@id/next_question_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/next_question_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/averia_sans_libre"
+            android:text="Create Quiz"
+            android:textColor="@color/primary_color"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/discard_question_btn"
+            app:layout_constraintStart_toEndOf="@id/discard_question_btn"
+            app:layout_constraintTop_toTopOf="@id/discard_question_btn" />
+
+        <android.widget.Button
+            android:id="@+id/next_question_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/add_quiz_button_outline"
+            android:fontFamily="@font/work_sans"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Next Question"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/quest_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Question No."
+            android:textColor="@color/primary_color"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/next_question_btn" />
+
+        <ProgressBar
+            android:id="@+id/question_no_progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:progressDrawable="@drawable/custom_progressbar_timer"
+            android:progress="100"
+            android:indeterminateTint="@color/primary_color"
+            app:layout_constraintEnd_toEndOf="@id/quest_num_text"
+            app:layout_constraintStart_toStartOf="@id/quest_num_text"
+            app:layout_constraintTop_toBottomOf="@id/quest_num_text"/>
+
+        <TextView
+            android:id="@+id/quest_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="1"
+            android:textColor="@color/off_white"
+            android:textSize="26dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/question_no_progressBar"
+            app:layout_constraintStart_toStartOf="@id/question_no_progressBar"
+            app:layout_constraintTop_toTopOf="@id/question_no_progressBar"
+            app:layout_constraintBottom_toBottomOf="@id/question_no_progressBar"/>
+
+        <TextView
+            android:id="@+id/enter_quest_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter question"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quest_num" />
+
+        <EditText
+            android:id="@+id/enter_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="question"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_quest_hint" />
+
+        <TextView
+            android:id="@+id/enter_ans_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter answer"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_question" />
+
+        <EditText
+            android:id="@+id/enter_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="answer"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_ans_hint" />
+
+        <TextView
+            android:id="@+id/enter_first_option_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter option one"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_answer" />
+
+        <EditText
+            android:id="@+id/enter_option_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="option one"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_first_option_hint" />
+
+        <TextView
+            android:id="@+id/enter_second_option_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter option two"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_option_one" />
+
+        <EditText
+            android:id="@+id/enter_option_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="option two"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_second_option_hint" />
+
+        <TextView
+            android:id="@+id/enter_third_option_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter option three"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_option_second" />
+
+        <EditText
+            android:id="@+id/enter_option_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="option three"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_third_option_hint" />
+
+        <TextView
+            android:id="@+id/enter_fourth_option_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter option four"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_option_three" />
+
+        <EditText
+            android:id="@+id/enter_option_fourth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="option four"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_fourth_option_hint" />
+
+
+        <TextView
+            android:id="@+id/ques_time_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:text="Enter time for this question"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_option_fourth" />
+
+        <TextView
+            android:id="@+id/ques_time_hint_milisec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans"
+            android:text="(in Seconds)"
+            android:textStyle="bold"
+            android:textColor="@color/off_white"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/ques_time_hint"
+            app:layout_constraintTop_toTopOf="@+id/ques_time_hint"
+            app:layout_constraintBottom_toBottomOf="@+id/ques_time_hint"/>
+
+        <EditText
+            android:id="@+id/question_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_options_outline"
+            android:fontFamily="@font/work_sans"
+            android:hint="Time to this question"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightText"
+            android:textSize="14sp"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ques_time_hint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

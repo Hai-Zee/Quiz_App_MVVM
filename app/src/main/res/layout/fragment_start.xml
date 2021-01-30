@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_black"
-    tools:context=".views.StartFragment">
+    tools:context=".views.fragments.StartFragment">
 
     <TextView
         android:id="@+id/quizAppWelcomeScreen"

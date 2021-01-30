@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="32dp"
+    android:background="@drawable/button_outline">
+
+
+    <TextView
+        android:id="@+id/enter_ID_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/work_sans"
+        android:text="Please paste unique ID below"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/quizIdEnteryfield"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/enter_quiz_id_edittext_bg"
+        android:textColor="@color/white"
+        android:textCursorDrawable="@color/white"
+        app:layout_constraintStart_toStartOf="@id/enter_ID_text"
+        app:layout_constraintTop_toBottomOf="@id/enter_ID_text" />
+
+    <android.widget.Button
+        android:id="@+id/submit_quizID_btn"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_outline"
+        android:fontFamily="@font/work_sans"
+        android:padding="4dp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizIdEnteryfield" />
+
+
+    <android.widget.Button
+        android:id="@+id/cancel_quizID_btn"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/button_outline"
+        android:fontFamily="@font/work_sans"
+        android:padding="4dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/submit_quizID_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/submit_quizID_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

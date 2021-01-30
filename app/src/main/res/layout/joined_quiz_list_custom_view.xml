@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="joinedQuizData"
+            type="com.example.quizappzeesh.model.QuizModel" />
+
+        <variable
+            name="onJoinedQuizListInterface"
+            type="com.example.quizappzeesh.adapter.JoinedQuizzesAdapter.OnJoinedQuizListInterface"/>
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -19,6 +35,7 @@
             android:layout_height="196dp"
             android:scaleType="centerCrop"
             android:src="@drawable/placeholder_image"
+            android:bindingImageUrl="@{joinedQuizData.imageUrl}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -39,7 +56,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/averia_sans_libre"
             android:textStyle="bold"
-            android:text="Quiz Title"
+            android:text="@{joinedQuizData.name}"
             android:textColor="@color/primary_color"
             android:textSize="26sp"
             android:gravity="start"
@@ -55,7 +72,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/work_sans"
-            android:text="Quiz Description"
+            android:text="@{joinedQuizData.description}"
             android:maxLines="3"
             android:ellipsize="end"
             android:textColor="@color/white"
@@ -74,7 +91,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/work_sans"
-            android:text="difficulty level"
+            android:text="@{joinedQuizData.level}"
             android:textColor="@color/colorLightText"
             android:textSize="14sp"
             android:gravity="start"
@@ -97,6 +114,7 @@
             android:textAlignment="center"
             android:background="@drawable/button_outline"
             android:padding="12dp"
+            android:onClick="@{() -> onJoinedQuizListInterface.onViewQuizClickListener(position)}"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="24dp"
@@ -108,3 +126,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
+</layout>
