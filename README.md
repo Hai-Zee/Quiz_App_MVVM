@@ -1,8 +1,9 @@
 # Quiz App
-User can take part into different quizzes to test, and can get the result
 
-- **MVVM Architecture**
-- **Used FireBase Cloud Store for real time database & Firebase Google Authentication**
+**It's a Quiz Maker android app, User can create quizzes on it and then can share it with others using Unique ID... so that others can participate in that quiz.
+
+- **MVVM Architecture with Data Binding**
+- **Used FireBase Cloud Firestore  for real time database & Firebase Google Authentication & Firebase Storage**
 - **Jetpack Navigation**
 - **View & Data Binding**
 - **Broadcast Reciever & Lottie Animations**
