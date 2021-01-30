@@ -28,7 +28,7 @@
   </tr>
    </table>
    
-   ### app view of Quiz Creator side
+   ### App view of Quiz Creator side
    <table>
    <tr>
   <td><img src = "https://user-images.githubusercontent.com/72437004/106351953-83abe900-6305-11eb-920a-08959a9068d6.jpg" height = "420" width="220"></td>
