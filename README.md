@@ -1,6 +1,6 @@
 # Quiz App (MVVM Architecture)
 
-**It's a Quiz Maker android app, User can create quizzes on it and then can share it with others using Unique ID... so that others can participate in that quiz.
+**It's a Quiz Maker android app, User can create quizzes on it and then can share it with others using Unique ID... so that others can participate in that quiz**
 
 - **MVVM Architecture with Data Binding**
 - **Used FireBase Cloud Firestore  for real time database & Firebase Google Authentication & Firebase Storage**
