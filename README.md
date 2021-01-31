@@ -5,10 +5,9 @@
 - **MVVM Architecture with Data Binding**
 - **Used FireBase Cloud Firestore  for real time database & Firebase Google Authentication & Firebase Storage**
 - **Jetpack Navigation**
-- **View & Data Binding**
+- **Low Size apk (Developed in Single Activity)**
 - **Broadcast Reciever & Lottie Animations**
 - **Attractive UI (Material Design)**
-- **Low Size apk (Developed in Single Activity)**
 - **Attractive UI (Material Design)**
 
 
