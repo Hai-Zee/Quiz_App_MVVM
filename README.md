@@ -8,7 +8,7 @@
 - **Low Size apk (Developed in Single Activity having 11 fragments)**
 - **Broadcast Reciever & Lottie Animations**
 - **Attractive UI (Material Design)**
-- **Attractive UI (Material Design)**
+- **Lottie Animation**
 
 
 ### Screenshots
