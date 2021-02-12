@@ -7,8 +7,8 @@
 - **Jetpack Navigation**
 - **Low Size APK (Developed in Single Activity having 11 fragments)**
 - **Broadcast Reciever & Lottie Animations**
-- **Attractive UI (Material Design)**
-- **Lottie Animation**
+- **Lottie Animation & Attractive UI (Material Design)**
+- ***Used Adobe XD to Designed the layout***
 
 
 ### Screenshots
