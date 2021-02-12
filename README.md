@@ -8,7 +8,7 @@
 - **Low Size APK (Developed in Single Activity having 11 fragments)**
 - **Broadcast Reciever & Lottie Animations**
 - **Attractive UI (Material Design)**
-- ***Used Adobe XD to Designed the layout***
+- ***Used Adobe XD to Design the layout***
 
 
 ### Screenshots
